@@ -1,72 +1,32 @@
-import React from "react"
-import ReactDOM from "react-dom"
+// Iteration 1
+const container = document.getElementById('react-container');
 
-//Iteration 1
+ReactDOM.render("Hello! Welcome to React",container);   
+ 
 
-// var container = document.getElementById("react-container")
-// container.innerHTML = "Hello! Welcome to React"
-
-// ReactDOM.render("Hello! Welcome to React",document.getElementById("react-container"))
-
-
-// let h1_tag = React.createElement(
-//   'h1',
-//   {id:"h1-tag"},
-//   "Hello! Welcome to React",
-//   React.createElement("div",null,"Welcome to react")
-// )
-
-// ReactDOM.render(h1_tag,container)
-
-
-//Iteration 2
-
-// var container = document.getElementById("react-container")
-
-
-// function reactContainer(){
-//   return(
-//     'h1',
-//     {id:"h1-tag"},
-//     "Hello! Welcome to React",
-
-//   )
-// }
-
-
-
-
-
-// function ReactContainer(){
-//   let div_tag1 = React.createElement(
-//     'h1',
-//     {id:"h1-tag"},
-//     "Hello! Welcome to React learning",
-//   )
-//   return div_tag1;
-// }
-
-// ReactDOM.render(ReactContainer(),container)
-
-
-
-//Iteration 3 
-
-class KalvianContainer extends React.Component {
-
-  render(){
-   return React.createElement(
-        'div',
-        {id:"h1-tag"},
-        "Hey Kalvians",
-        React.createElement("div",null,"Welcome to react")
-      )
-  }
+// Iteration 2
+function Rectcontainer (){
+    
+        return React.createElement(
+            `div`,
+            null,
+            "Hey Kalvians! Welcome to React Learning",
+                    React.createElement(`div`,null,"Let's rock and roll"))
 
 }
 
-var container = document.getElementById("react-container")
-ReactDOM.render(React.createElement(KalvianContainer),container)
+ReactDOM.render(Rectcontainer(),container)
 
+//Iteration 3 
 
+class Kalvium extends React.Component{
+        render(){
+            return  React.createElement(
+                `div`,
+                null,
+                "Hey Kalvians",
+                        React.createElement(`div`,null,"Let's rock and roll with classes"))
+        }
+}
 
+ReactDOM.render(React.createElement(Kalvium),container);
